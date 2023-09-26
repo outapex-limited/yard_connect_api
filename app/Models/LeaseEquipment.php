@@ -18,6 +18,7 @@ class LeaseEquipment extends Model
     protected $fillable = [
         'user_id',
         'name',
+        'description',
         'manufacturer_id',
         'category_id',
         'sub_category_id',

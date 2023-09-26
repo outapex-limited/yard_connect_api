@@ -15,6 +15,7 @@ return new class extends Migration
             $table->uuid('id');
             $table->foreignUuid('user_id');
             $table->string('name');
+            $table->text('description');
             $table->foreignId('manufacturer_id');
             $table->foreignId('category_id');
             $table->foreignId('sub_category_id');
