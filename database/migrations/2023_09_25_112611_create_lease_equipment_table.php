@@ -25,6 +25,8 @@ return new class extends Migration
             $table->float('default_price', 15, 2);
             $table->foreignId('pricing_type_id');
             $table->integer('min_lease_period');
+            $table->bigInteger('units')->defaul(0);
+            $table->foreignId('equipment_condition_id');
             $table->foreignId('equipment_status_id');
             $table->timestamps();
         });

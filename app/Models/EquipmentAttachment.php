@@ -18,7 +18,9 @@ class EquipmentAttachment extends Model
     protected $fillable = [
         'lease_equipment_id',
         'attachmnent_id',
-        'default_price',
         'images',
+        'default_price',
+        'units',
+        'attachment_condition_id'
     ];
 }

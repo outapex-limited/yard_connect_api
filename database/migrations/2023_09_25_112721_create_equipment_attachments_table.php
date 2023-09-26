@@ -17,6 +17,8 @@ return new class extends Migration
             $table->foreignUuid('attachment_id');
             $table->text('images');
             $table->float('default_price', 15, 2);
+            $table->bigInteger('units')->default(0);
+            $table->foreignId('attahment_condition_id');
             $table->timestamps();
         });
     }

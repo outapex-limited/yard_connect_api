@@ -28,6 +28,8 @@ class LeaseEquipment extends Model
         'default_price',
         'pricing_type_id',
         'min_lease_period',
+        'units',
         'equipment_status_id',
+        'equipment_condition_id'
     ];
 }
