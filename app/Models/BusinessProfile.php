@@ -22,6 +22,9 @@ class BusinessProfile extends Model
         'website',
         'contact',
         'email',
+        'latitude',
+        'longitude',
+        'location',
         'business_certificate_path'
     ];
 }

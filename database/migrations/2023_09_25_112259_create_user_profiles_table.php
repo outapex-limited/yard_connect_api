@@ -15,15 +15,13 @@ return new class extends Migration
             $table->uuid('id');
             $table->foreignUuid('user_id');
             $table->foreignId('gender_id');
-            $table->foreignId('kyc_status_id');
             $table->string('first_name');
             $table->String('last_name');
-            $table->string('id_number')->unique();
-            $table->string('id_path')->nullable();
-            $table->date('dob')->nullable();
+            $table->string('country_code');
             $table->string('email')->unique();
             $table->string('phone_number')->unique();
             $table->string('profile_pic')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

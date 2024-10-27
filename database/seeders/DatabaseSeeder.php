@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             PricingTypeSeeder::class,
             RoleSeeder::class,
             SubCategorySeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

@@ -19,14 +19,27 @@ class UserProfile extends Model
     protected $fillable = [
         'user_id',
         'gender_id',
-        'kyc_status_id',
         'first_name',
         'last_name',
-        'id_number',
-        'id_path',
-        'dob',
         'email',
+        'country_code',
         'phone_number',
         'profile_pic',
+        'email_verified_at',
     ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
+    // define userprofile - gender relationships
+    public function gender()
+    {
+        return $this->hasOne(Gender::class, 'id', 'gender_id');
+    }
 }

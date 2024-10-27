@@ -22,6 +22,8 @@ return new class extends Migration
             $table->foreignId('industry_id');
             $table->integer('year');
             $table->text('images');
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->string('location');
             $table->float('default_price', 15, 2);
             $table->foreignId('pricing_type_id');

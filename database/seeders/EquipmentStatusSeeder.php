@@ -16,20 +16,26 @@ class EquipmentStatusSeeder extends Seeder
     {
         // default user statuses to be used on the platform
         DB::table('equipment_statuses')->insert([
-            'name' => 'Excellent',
-            'description' => 'Excellent condition',
+            'name' => 'Available',
+            'description' => 'Equipment available',
             'created_at' => Date::now(),
             'updated_at' => Date::now(),
         ]);
         DB::table('equipment_statuses')->insert([
-            'name' => 'Good',
-            'description' => 'Good condition',
+            'name' => 'Leased Out',
+            'description' => 'Equipment leased out',
             'created_at' => Date::now(),
             'updated_at' => Date::now(),
         ]);
         DB::table('equipment_statuses')->insert([
-            'name' => 'Poor',
-            'description' => 'Poor condition',
+            'name' => 'Sold',
+            'description' => 'Equipment sold',
+            'created_at' => Date::now(),
+            'updated_at' => Date::now(),
+        ]);
+        DB::table('equipment_statuses')->insert([
+            'name' => 'Unavailable',
+            'description' => 'Equipment unavailable',
             'created_at' => Date::now(),
             'updated_at' => Date::now(),
         ]);

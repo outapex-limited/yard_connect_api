@@ -15,19 +15,19 @@ class EquipmentConditionSeeder extends Seeder
     public function run(): void
     {
         // default user statuses to be used on the platform
-        DB::table('attachment_conditions')->insert([
+        DB::table('equipment_conditions')->insert([
             'name' => 'Excellent',
             'description' => 'Excellent condition',
             'created_at' => Date::now(),
             'updated_at' => Date::now(),
         ]);
-        DB::table('attachment_conditions')->insert([
+        DB::table('equipment_conditions')->insert([
             'name' => 'Good',
             'description' => 'Good condition',
             'created_at' => Date::now(),
             'updated_at' => Date::now(),
         ]);
-        DB::table('attachment_conditions')->insert([
+        DB::table('equipment_conditions')->insert([
             'name' => 'Poor',
             'description' => 'Poor condition',
             'created_at' => Date::now(),

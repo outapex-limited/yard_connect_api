@@ -47,4 +47,34 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // define user - role relationships
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    // define user - status relationships
+    public function accountStatus()
+    {
+        return $this->hasOne(AccountStatus::class, 'id', 'account_status_id');
+    }
+
+    // define user - userProfile relationships
+    public function userProfile()
+    {
+        return $this->hasOne(UserProfile::class);
+    }
+
+    // define user - userProfile relationships
+    public function businessProfile()
+    {
+        return $this->hasOne(BusinessProfile::class);
+    }
+
+    // define user - equipment relationships
+    public function leaseEquipment()
+    {
+        return $this->hasMany(LeaseEquipment::class);
+    }
 }

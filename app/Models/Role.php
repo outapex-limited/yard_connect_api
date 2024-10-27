@@ -20,8 +20,8 @@ class Role extends Model
     ];
 
     // defining readable constants for roles 
-    public const IS_MERCHANT = 1;
-    public const IS_LESSEE = 2;
+    public const IS_LESSEE = 1;
+    public const IS_MERCHANT = 2;
     public const IS_CUSTOMER_SERVICE = 3;
     public const IS_ADMIN = 4;
     public const IS_DEVELOPER = 5;

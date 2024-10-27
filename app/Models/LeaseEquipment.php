@@ -25,6 +25,8 @@ class LeaseEquipment extends Model
         'industry_id',
         'year',
         'images',
+        'latitude',
+        'longitude',
         'location',
         'default_price',
         'pricing_type_id',
@@ -33,4 +35,52 @@ class LeaseEquipment extends Model
         'equipment_status_id',
         'equipment_condition_id'
     ];
+
+    // define leaseequipment - merchant relationships
+    public function merchant()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
+    // define leaseequipment - manufacturer relationships
+    public function manufacturer()
+    {
+        return $this->belongsTo(Manufacturer::class);
+    }
+
+    // define leaseequipment - category relationships
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    // define leaseequipment - subcategory relationships
+    public function subCategory()
+    {
+        return $this->belongsTo(SubCategory::class);
+    }
+
+    // define leaseequipment - industry relationships
+    public function industry()
+    {
+        return $this->belongsTo(Industry::class, 'industry_id', 'id');
+    }
+
+    // define leaseequipment - pricing type relationships
+    public function pricingType()
+    {
+        return $this->belongsTo(PricingType::class);
+    }
+
+    // define leaseequipment - status relationships
+    public function status()
+    {
+        return $this->belongsTo(EquipmentStatus::class, 'equipment_status_id', 'id');
+    }
+
+    // define leaseequipment - condition relationships
+    public function condition()
+    {
+        return $this->belongsTo(EquipmentCondition::class, 'equipment_condition_id', 'id');
+    }
 }

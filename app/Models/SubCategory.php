@@ -19,4 +19,10 @@ class SubCategory extends Model
         'description',
         'category_id',
     ];
+
+    // define subcategory - category relationships
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

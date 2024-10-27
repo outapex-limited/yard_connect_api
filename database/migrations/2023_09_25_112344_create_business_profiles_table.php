@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('website')->unique();
             $table->string('contact')->unique();
             $table->string('email')->unique();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
+            $table->string('location');
             $table->string('business_certificate_path');
             $table->softDeletes();
             $table->timestamps();
